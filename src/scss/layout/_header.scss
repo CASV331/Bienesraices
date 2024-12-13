@@ -1,0 +1,63 @@
+@use "../base/variables.scss";
+@use "../base/mixins";
+
+.no-webp .inicio {
+  background-image: url(../img/header.jpg);
+  background-color: rgba(25, 50, 65, 0.575);
+  background-blend-mode: darken;
+}
+
+.webp .inicio {
+  background-image: url(../img/header.webp);
+  background-color: rgba(25, 50, 65, 0.575);
+  background-blend-mode: darken;
+}
+.header {
+  background-color: variables.$grisOscuro;
+  padding: 1rem 0 3rem 0;
+
+  &.inicio {
+    background-position: center center;
+    background-size: cover;
+    @include mixins.tablet {
+      min-height: 70rem;
+    }
+    .contenido-header {
+      @include mixins.tablet {
+        min-height: 70rem;
+      }
+    }
+  }
+}
+
+.contenido-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    text-align: center;
+    color: variables.$blanco;
+    font-weight: variables.$bold;
+    line-height: 2;
+    max-width: 60rem;
+
+    @include mixins.tablet {
+      text-align: left;
+    }
+  }
+}
+.barra {
+  display: flex;
+  align-items: center;
+  .logo-header {
+    max-width: 100%;
+    width: 24rem;
+    height: auto;
+  }
+  @include mixins.tablet {
+    .logo-header {
+      width: 28rem;
+    }
+  }
+}

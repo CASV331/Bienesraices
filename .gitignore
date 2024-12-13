@@ -1,0 +1,22 @@
+node_modules
+
+# Archivos del sistema
+.DS_Store
+
+# Configuración de PHP o del servidor
+.env
+
+
+# Dependencias y paquetes
+/vendor/
+composer.lock
+
+# Archivos temporales
+*.log
+*.cache
+
+# Archivos subidos por los usuarios
+imagenes/
+
+# Configuración de IDEs
+.vscode/
